@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>restaurant</title>
+        <style>
+            :root{
+                --main-radious:5px;
+            }
+            
+            *{
+                box-sizing: border-box;
+                padding: 0px;
+                margin:0px;
+
+            }
+            body{
+                width: 100vw;
+                height: 100vh;
+                background-color:rgb(0, 0, 0)
+            }
+            button{
+                width:60%;
+                height:40px;
+                background-color:rgba(206, 240, 11, 0.767);
+                
+               
+                border: transparent;
+                border-radius: 20px;
+                transition: 1s;
+            }
+            button:hover{
+                scale: 1.1;
+                transition: 1s;
+            }
+            a{
+                text-decoration: none;
+            }
+            p{
+                font-family:Georgia, 'Times New Roman', Times, serif
+            }
+          
+
+            .container{
+                width:100vw;
+                height:100vh;
+                margin: 0;
+                padding: 0;
+                border-radius:var(--main-radious);
+                border:solid transparent 5px;
+                display:grid;
+                grid-gap:5px;
+                grid-template-columns:1fr;
+                grid-template-rows:1fr 1fr 1fr 1fr ;
+                grid-template-areas:
+                "one "
+                "two "
+                "three"
+                "four";
+            }
+
+  
+            .container > div {
+                display: flex;
+                align-items:center;
+                justify-content:center
+            }
+            .one,.two,.three,.four{
+                border-radius:var(--main-radious);
+
+                transition: .1s;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+        
+            }
+            .container > div:hover{
+                filter:brightness(80%);
+                transition: 1s;
+            }
+         
+            .one{
+                grid-area: one;
+                background-image: url(./img/pizza.jpg);
+            }
+     
+            .two{
+                grid-area:two;
+                background-image: url(./img/salad.jpg);
+               
+            }
+            .three{
+                grid-area:three;
+                background-image: url(./img/sandwich.jpg);
+               
+             
+            }
+            .four{
+                grid-area:four;
+                background-image: url(./img/dessert.jpg);
+             
+            }
+        
+
+        
+
+
+
+
+
+
+        
+            @media only screen and (min-width:600px) {
+                .container{
+                    border-radius:var(--main-radious);  
+                    display:grid;
+                    grid-template-columns: repeat(2,1fr);
+                    grid-template-rows: 1fr 1fr ;
+                    grid-template-areas:
+                    "one two"
+                    "three four";
+                } 
+            }
+            @media  screen and (min-width:900px){
+
+
+                .container{
+                    border-radius:var(--border-radious);
+                    width:100vw;
+                    height:100vh;
+                    margin: 0;
+                    padding: 0;
+                    border:solid transparent 5px;
+                    display:grid;
+                    grid-template-columns: repeat(4,1fr);
+                    grid-template-rows: 1fr;
+                    grid-template-areas:
+                    "one two three four";
+                }
+
+            }
+            
+
+        </style>
+    </header>
+    
+    <body>
+        <div class="container">
+            <div class="one"><button><a href=""><h4>order70%free</h4></a></button></div>
+            <div class="two"><button><a href=""><h4>order70%free</h4></a></button></div>
+            <div class="three"><button><a href=""><h4>order70%free</h4></a></button></div>
+            <div class="four"><button><a href=""><h4>order70%free</h4></a></button></div>
+
+            
+        </div>
+
+        <script>
+            
+        </script>
+        
+
+    </body>
+</html>
